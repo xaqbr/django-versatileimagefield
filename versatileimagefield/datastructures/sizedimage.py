@@ -100,6 +100,7 @@ class SizedImage(ProcessedImage, dict):
                      '[width-in-pixels]x[height-in-pixels]'
                      Example: '400x400'
         """
+        key = key.lstrip("d")
         try:
             width, height = [int(i) for i in key.split('x')]
         except (KeyError, ValueError):
